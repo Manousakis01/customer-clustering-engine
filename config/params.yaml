@@ -1,0 +1,19 @@
+storage:
+  bucket: "survey-dataset"
+  object_name: "dataset.xlsx"
+  local_path: "/tmp/dataset.xlsx"
+
+cleaning:
+  fill_value: 0.0
+  drop_thresh: 0.8
+  exclude_recontact_features: false
+
+features:
+  min_unique: 1
+
+reduction:
+  method: "pca"  # or "umap"
+  n_components: 10
+
+clustering:
+  n_clusters: 4
