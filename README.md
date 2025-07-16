@@ -126,7 +126,8 @@ You can run the project in two ways: via the interactive Streamlit UI or directl
 
 **Note**: This guide assumes you have Docker and Docker Compose installed.
 
-**Whatever method you choose, dont forget to add the xlsx file in the minio bucket (bucket: survey-dataset as per config).**
+**Whatever method you choose, dont forget to check that the xlsx file is present in the minio bucket (bucket: survey-dataset as per config).**
+<img width="1736" height="1234" alt="Image" src="https://github.com/user-attachments/assets/127db7ba-a538-4f87-ab44-526bee3dd0df" />
 
 ### 1. Running with the Streamlit UI (Recommended)
 
@@ -146,6 +147,7 @@ This is the primary way to use the application. It starts all necessary services
 3.  **Run the Pipeline**
     - Use the sidebar in the Streamlit UI to configure the pipeline parameters.
     - Click the "Run Pipeline" button to see the results.
+    <img width="1677" height="1237" alt="Image" src="https://github.com/user-attachments/assets/c406a177-a1fb-4fe9-aa41-bef2ff0877e5" />
 
 ### 2. Running from the Command Line
 
