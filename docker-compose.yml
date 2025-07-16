@@ -35,5 +35,16 @@ services:
         mc policy set public local/survey-dataset;
       "
 
+  streamlit:
+    build: .
+    container_name: streamlit-ui
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    depends_on:
+      - minio
+
+
 volumes:
   minio_data:
