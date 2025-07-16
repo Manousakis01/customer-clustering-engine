@@ -1,7 +1,8 @@
 cleaning:
   drop_thresh: 0.8
-  exclude_recontact_features: true
+  exclude_recontact_features: false
   fill_value: 0
+  imputation_method: fill
 clustering:
   method: kmeans
   n_clusters: 3
