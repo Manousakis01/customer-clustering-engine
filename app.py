@@ -23,7 +23,14 @@ def config_ui(default_config):
 
     # Cleaning
     st.sidebar.subheader("Cleaning")
-    default_config['cleaning']['fill_value'] = st.sidebar.number_input("Fill missing with", value=0)
+    imputation_options = ["fill", "mode"]
+    imputation_index = imputation_options.index(default_config['cleaning'].get('imputation_method', 'fill'))
+    imputation_method = st.sidebar.selectbox("Imputation method", imputation_options, index=imputation_index)
+    default_config['cleaning']['imputation_method'] = imputation_method
+
+    if imputation_method == 'fill':
+        default_config['cleaning']['fill_value'] = st.sidebar.number_input("Fill missing with", value=0)
+
     default_config['cleaning']['drop_thresh'] = st.sidebar.slider("Drop threshold", 0.0, 1.0, value=0.8)
     default_config['cleaning']['exclude_recontact_features'] = st.sidebar.checkbox("Exclude recontact features", value=False)
 
