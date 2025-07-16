@@ -11,4 +11,6 @@ def download_from_minio(bucket, object_name, local_path="/tmp/dataset.csv"):
         secure=False
     )
 
+    client.fget_object(bucket, object_name, local_path)
+
     return local_path
