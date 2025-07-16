@@ -20,7 +20,8 @@ def run_pipeline(params):
     labels = cluster.run_clustering(df_reduced, params['clustering'])
     print("Clustering completed...")
     evaluate.print_scores(df_reduced, labels)
-    cluster_viz.visualize(df_reduced, labels)
+    cluster_viz.visualize(df_reduced, labels, params['clustering'])
+
 
 if __name__ == '__main__':
     with open('config/params.yaml') as f:

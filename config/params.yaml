@@ -4,16 +4,18 @@ storage:
   local_path: "/tmp/dataset.xlsx"
 
 cleaning:
-  fill_value: 0.0
+  fill_value: 0
   drop_thresh: 0.8
   exclude_recontact_features: false
 
 features:
   min_unique: 1
+  use_variance_threshold: true
 
 reduction:
   method: "pca"  # or "umap"
-  n_components: 10
+  n_components: 2
 
 clustering:
-  n_clusters: 4
+  n_clusters: 3
+  method:  "kmeans" #"kmeans"  or "agglomerative"

@@ -8,6 +8,7 @@ def load_data(storage_config):
         object_name=storage_config['object_name'],
         local_path=storage_config['local_path']
     )
+    print(filepath)
     if filepath.endswith('.xlsx'):
         return pd.read_excel(filepath)
     elif filepath.endswith('.csv'):
